@@ -1,0 +1,5 @@
+position: 3
+label: 문제풀이
+link:
+  type: generated-index
+  slug: dsa/problems

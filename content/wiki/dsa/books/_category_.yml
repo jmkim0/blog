@@ -1,0 +1,5 @@
+position: 4
+label: 관련 책 정리
+link:
+  type: generated-index
+  slug: dsa/books
