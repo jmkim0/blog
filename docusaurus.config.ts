@@ -34,9 +34,11 @@ const config: Config = {
         },
         blog: {
           path: 'content/posts',
-          routeBasePath: 'posts',
-          blogSidebarTitle: 'All Posts',
+          blogTitle: 'Posts',
+          blogDescription: 'Posts',
           blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Posts',
+          routeBasePath: 'posts',
           postsPerPage: 5,
           showReadingTime: false,
           feedOptions: {
