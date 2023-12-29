@@ -1,5 +1,5 @@
 import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic'
+import type * as Preset from '@docusaurus/preset-classic';
 
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -25,15 +25,35 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'content/wiki',
+          path: 'content/10 Wiki',
           routeBasePath: 'wiki',
           sidebarPath: require.resolve('./sidebars.ts'),
           showLastUpdateTime: true,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const items = await defaultSidebarItemsGenerator(args);
+
+            function stripNumberPrefix(item) {
+              if (item.type === 'doc') {
+                const match = /^(\d{2}|\d{2}\.\d{2}) (.+)/.exec(item.label);
+                return {...item, label: match ? match[2] : item.label};
+              } else if (item.type === 'category') {
+                const match = /^(\d{2}|\d{2}\.\d{2}) (.+)/.exec(item.label);
+                return {
+                  ...item,
+                  label: match ? match[2] : item.label,
+                  items: item.items.map(stripNumberPrefix)
+                };
+              }
+              return item;
+            }
+
+            return items.map(stripNumberPrefix);
+          }
         },
         blog: {
-          path: 'content/posts',
+          path: 'content/20 Posts',
           blogTitle: 'Posts',
           blogDescription: 'Posts',
           blogSidebarCount: 'ALL',
@@ -87,16 +107,16 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          label: 'Docs Tags',
-          to: 'docs/tags'
+          label: 'Wiki Tags',
+          to: 'wiki/tags'
         },
         {
-          label: 'Blog Tags',
-          to: 'blog/tags',
+          label: 'Posts Tags',
+          to: 'posts/tags',
         },
         {
-          label: 'Blog Archive',
-          to: 'blog/archive',
+          label: 'Posts Archive',
+          to: 'posts/archive',
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} jmkim0. Built with Docusaurus.`,
