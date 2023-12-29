@@ -2,7 +2,7 @@
 tags: [DSA, Stack, Queue, Tree, Graph, Binary Tree, BST, BFS, DFS, Heap, Trie, Recursion, Greedy, Brute-force, Divide-and-conquer, DP, Binary Search, Parametric Search]
 ---
 
-# 자료구조와 알고리즘 기초
+# 자료구조와 알고리즘
 
 ## 자료구조
 

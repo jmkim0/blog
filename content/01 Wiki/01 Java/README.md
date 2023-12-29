@@ -2,7 +2,7 @@
 tags: [Java]
 ---
 
-# Java 기초
+# Java
 
 ## Java의 특징
 

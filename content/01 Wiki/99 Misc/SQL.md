@@ -2,7 +2,7 @@
 tags: [RDB, MySQL]
 ---
 
-# Relational Database
+# Relational Databases
 
 ## [데이터베이스](https://en.wikipedia.org/wiki/Database)
 
