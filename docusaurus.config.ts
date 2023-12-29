@@ -1,10 +1,10 @@
-import type { Config } from '@docusaurus/types';
+import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-const { themes } = require('prism-react-renderer');
+const {themes} = require('prism-react-renderer');
 
 const config: Config = {
   title: 'blog.jmk.im',
@@ -43,14 +43,14 @@ const config: Config = {
                 return {
                   ...item,
                   label: match ? match[2] : item.label,
-                  items: item.items.map(stripNumberPrefix)
+                  items: item.items.map(stripNumberPrefix),
                 };
               }
               return item;
             }
 
             return items.map(stripNumberPrefix);
-          }
+          },
         },
         blog: {
           path: 'content/20 Posts',
@@ -63,7 +63,7 @@ const config: Config = {
           showReadingTime: false,
           feedOptions: {
             type: null,
-          }
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -78,7 +78,7 @@ const config: Config = {
     docs: {
       sidebar: {
         hideable: true,
-      }
+      },
     },
     navbar: {
       title: 'blog.jmk.im',
@@ -108,7 +108,7 @@ const config: Config = {
       links: [
         {
           label: 'Wiki Tags',
-          to: 'wiki/tags'
+          to: 'wiki/tags',
         },
         {
           label: 'Posts Tags',
@@ -124,7 +124,15 @@ const config: Config = {
     prism: {
       theme: themes.github,
       darkTheme: themes.dracula,
-      additionalLanguages: ['bash', 'diff', 'json', 'java', 'gradle', 'docker', 'nginx'],
+      additionalLanguages: [
+        'bash',
+        'diff',
+        'json',
+        'java',
+        'gradle',
+        'docker',
+        'nginx',
+      ],
     },
     algolia: {
       appId: 'ZA8YY0YWBO',
@@ -142,7 +150,7 @@ const config: Config = {
       headingIds: false,
     },
   },
-  
+
   headTags: [
     {
       tagName: 'link',
@@ -181,7 +189,8 @@ const config: Config = {
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
       type: 'text/css',
-      integrity: 'sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV',
+      integrity:
+        'sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV',
       crossorigin: 'anonymous',
     },
   ],

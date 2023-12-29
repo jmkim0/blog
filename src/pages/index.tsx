@@ -13,19 +13,11 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Wiki',
-    description: (
-      <>
-        지식 저장소
-      </>
-    ),
+    description: <>지식 저장소</>,
   },
   {
     title: 'Posts',
-    description: (
-      <>
-        남기고 싶은 글
-      </>
-    ),
+    description: <>남기고 싶은 글</>,
   },
 ];
 
@@ -69,9 +61,7 @@ function HomepageFeatures(): JSX.Element {
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title="Home"
-      description="jmkim0's blog">
+    <Layout title="Home" description="jmkim0's blog">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
