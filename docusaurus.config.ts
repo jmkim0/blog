@@ -61,6 +61,8 @@ const config: Config = {
           blogSidebarTitle: 'All Posts',
           routeBasePath: 'posts',
           postsPerPage: 5,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           showReadingTime: false,
           feedOptions: {
             type: null,
