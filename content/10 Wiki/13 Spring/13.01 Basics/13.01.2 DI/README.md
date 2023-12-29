@@ -46,7 +46,7 @@ List<String> userList = service.getUsernameList();
 
 :::tip[See Also]
 
-- [Singleton Pattern](/docs/misc/design-patterns#singleton-pattern)
+- [Singleton Pattern](/content/10%20Wiki/19%20Miscellaneous/design-patterns.md#singleton-pattern)
 
 :::
 
