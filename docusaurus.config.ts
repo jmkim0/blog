@@ -25,7 +25,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'content/10 Blog/11 Wiki',
+          path: 'content/10 Wiki',
           routeBasePath: 'wiki',
           sidebarPath: require.resolve('./sidebars.ts'),
           showLastUpdateTime: true,
@@ -54,7 +54,7 @@ const config: Config = {
           },
         },
         blog: {
-          path: 'content/10 Blog/12 Posts',
+          path: 'content/20 Posts',
           blogTitle: 'Posts',
           blogDescription: 'Posts',
           blogSidebarCount: 'ALL',
