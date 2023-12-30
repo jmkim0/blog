@@ -25,7 +25,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'content/01 Wiki',
+          path: 'content/11 Wiki',
           routeBasePath: 'wiki',
           sidebarPath: require.resolve('./sidebars.ts'),
           showLastUpdateTime: true,
@@ -35,7 +35,7 @@ const config: Config = {
             const items = await defaultSidebarItemsGenerator(args);
 
             function stripNumberPrefix(item) {
-              const regex = /^(\d{2}|\d{2}\.\d{2}|\d{4}) (.+)/;
+              const regex = /^(\d{2}|\d{2}\.\d{2,3}) (.+)/;
               if (item.type === 'doc') {
                 const match = regex.exec(item.label);
                 return {...item, label: match ? match[2] : item.label};
@@ -54,7 +54,7 @@ const config: Config = {
           },
         },
         blog: {
-          path: 'content/02 Posts',
+          path: 'content/20 Posts',
           blogTitle: 'Posts',
           blogDescription: 'Posts',
           blogSidebarCount: 'ALL',
