@@ -25,7 +25,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'content/11 Wiki',
+          path: 'content/10 Wiki',
           routeBasePath: 'wiki',
           sidebarPath: require.resolve('./sidebars.ts'),
           showLastUpdateTime: true,
