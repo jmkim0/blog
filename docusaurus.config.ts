@@ -33,15 +33,15 @@ const config: Config = {
             const items = await defaultSidebarItemsGenerator(args);
 
             function stripNumberPrefix(item) {
-              const regex = /^(\d{2}|\d{2}\.\d{2,3}) (.+)/;
+              const regex = /^(?:\d{2}|\d{2}\.\d{2,3}) (.+)/;
               if (item.type === 'doc') {
                 const match = regex.exec(item.label);
-                return {...item, label: match ? match[2] : item.label};
+                return {...item, label: match ? match[1] : item.label};
               } else if (item.type === 'category') {
                 const match = regex.exec(item.label);
                 return {
                   ...item,
-                  label: match ? match[2] : item.label,
+                  label: match ? match[1] : item.label,
                   items: item.items.map(stripNumberPrefix),
                 };
               }
@@ -145,6 +145,16 @@ const config: Config = {
   markdown: {
     format: 'detect',
     mermaid: true,
+    parseFrontMatter: async params => {
+      const result = await params.defaultParseFrontMatter(params);
+      const path = /(?:10 Wiki|20 Posts\/2\d)(.*)/.exec(params.filePath)[1];
+
+      result.frontMatter.slug = path
+        .replaceAll(/(?:\d{2}|\d{2}\.\d{2,3}) /g, '')
+        .replaceAll(' ', '+');
+
+      return result;
+    },
     mdx1Compat: {
       comments: false,
       admonitions: false,
