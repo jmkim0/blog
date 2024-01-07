@@ -138,7 +138,7 @@ const config: Config = {
   markdown: {
     format: 'detect',
     mermaid: true,
-    parseFrontMatter: async params => {
+    async parseFrontMatter(params) {
       const result = await params.defaultParseFrontMatter(params);
       const path = /(?:10 Wiki|20 Posts\/2\d)(.*).md/.exec(params.filePath)[1];
 
