@@ -12,10 +12,6 @@ const config: Config = {
   url: 'https://blog.jmk.im',
   baseUrl: '/',
   trailingSlash: false,
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
   onBrokenAnchors: 'throw',
   onBrokenMarkdownLinks: 'throw',
   presets: [
@@ -72,9 +68,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themes: ['@docusaurus/theme-mermaid'],
-
   themeConfig: {
     docs: {
       sidebar: {
@@ -141,7 +135,6 @@ const config: Config = {
       indexName: 'jmk',
     },
   } satisfies Preset.ThemeConfig,
-
   markdown: {
     format: 'detect',
     mermaid: true,
@@ -161,7 +154,6 @@ const config: Config = {
       headingIds: false,
     },
   },
-
   headTags: [
     {
       tagName: 'link',
@@ -195,7 +187,6 @@ const config: Config = {
       },
     },
   ],
-
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
