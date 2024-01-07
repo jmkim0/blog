@@ -147,7 +147,7 @@ const config: Config = {
     mermaid: true,
     parseFrontMatter: async params => {
       const result = await params.defaultParseFrontMatter(params);
-      const path = /(?:10 Wiki|20 Posts\/2\d)(.*)/.exec(params.filePath)[1];
+      const path = /(?:10 Wiki|20 Posts\/2\d)(.*).md/.exec(params.filePath)[1];
 
       result.frontMatter.slug = path
         .replaceAll(/(?:\d{2}|\d{2}\.\d{2,3}) /g, '')
