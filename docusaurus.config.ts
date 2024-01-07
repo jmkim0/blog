@@ -9,17 +9,15 @@ const {themes} = require('prism-react-renderer');
 const config: Config = {
   title: 'blog.jmk.im',
   tagline: `jmkim0's blog`,
-
   url: 'https://blog.jmk.im',
   baseUrl: '/',
-
   trailingSlash: false,
-
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  onBrokenAnchors: 'throw',
+  onBrokenMarkdownLinks: 'throw',
   presets: [
     [
       'classic',
