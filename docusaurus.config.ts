@@ -143,7 +143,7 @@ const config: Config = {
       const path = /(?:01 Wiki|02 Posts)(.*).md/.exec(params.filePath)[1];
 
       result.frontMatter.slug = path
-        .replaceAll(/\d{2} /g, '')
+        .replaceAll(/\/\d{2} /g, '/')
         .replaceAll(' ', '+');
 
       return result;
