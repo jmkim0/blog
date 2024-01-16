@@ -3,6 +3,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import convertAnchor from './src/remark/convert-anchor';
 
 const {themes} = require('prism-react-renderer');
 
@@ -23,7 +24,7 @@ const config: Config = {
           routeBasePath: 'wiki',
           sidebarPath: require.resolve('./sidebars.ts'),
           showLastUpdateTime: true,
-          remarkPlugins: [remarkMath],
+          remarkPlugins: [remarkMath, convertAnchor],
           rehypePlugins: [rehypeKatex],
           async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
             const items = await defaultSidebarItemsGenerator(args);
@@ -55,7 +56,7 @@ const config: Config = {
           blogSidebarTitle: 'All Posts',
           routeBasePath: 'posts',
           postsPerPage: 5,
-          remarkPlugins: [remarkMath],
+          remarkPlugins: [remarkMath, convertAnchor],
           rehypePlugins: [rehypeKatex],
           showReadingTime: false,
           feedOptions: {
