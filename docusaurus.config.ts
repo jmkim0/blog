@@ -20,7 +20,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'content/01 Wiki',
+          path: 'content/10 Wiki',
           routeBasePath: 'wiki',
           sidebarPath: require.resolve('./sidebars.ts'),
           showLastUpdateTime: true,
@@ -30,7 +30,7 @@ const config: Config = {
             const items = await defaultSidebarItemsGenerator(args);
 
             function stripNumberPrefix(item) {
-              const regex = /^\d{2} (.+)/;
+              const regex = /^\d{2}(?:\.\d+)? (.+)/;
               if (item.type === 'doc') {
                 const match = regex.exec(item.label);
                 return {...item, label: match ? match[1] : item.label};
@@ -49,7 +49,7 @@ const config: Config = {
           },
         },
         blog: {
-          path: 'content/02 Posts',
+          path: 'content/20 Posts',
           blogTitle: 'Posts',
           blogDescription: 'Posts',
           blogSidebarCount: 'ALL',
@@ -141,10 +141,10 @@ const config: Config = {
     mermaid: true,
     async parseFrontMatter(params) {
       const result = await params.defaultParseFrontMatter(params);
-      const path = /(?:01 Wiki|02 Posts)(.*).md/.exec(params.filePath)[1];
+      const path = /(?:10 Wiki|20 Posts)(.*).md/.exec(params.filePath)[1];
 
       result.frontMatter.slug = path
-        .replaceAll(/\/\d{2} /g, '/')
+        .replaceAll(/\/(?:\d{2}(?:\.\d+)?|\d{4}-\d{2}-\d{2}) /g, '/')
         .replaceAll(' ', '+');
 
       return result;
