@@ -1,5 +1,6 @@
 import type {Root} from 'mdast';
 import type {Transformer} from 'unified';
+
 import {visit} from 'unist-util-visit';
 
 export default function convertAnchor(): Transformer {
