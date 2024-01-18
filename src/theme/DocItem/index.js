@@ -7,6 +7,7 @@ export default function DocItemWrapper(props) {
     <>
       <DocItem {...props} />
       <Giscus
+        id='doc-comments'
         className="docItemCol"
         repo="jmkim0/blog"
         repoId="R_kgDOK-1fHg"

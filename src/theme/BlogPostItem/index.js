@@ -11,6 +11,7 @@ export default function BlogPostItemWrapper(props) {
       <BlogPostItem {...props} />
       {isBlogPostPage && (
         <Giscus
+          id='blog-comments'
           repo="jmkim0/blog"
           repoId="R_kgDOK-1fHg"
           category="giscus"
