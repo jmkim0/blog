@@ -59,7 +59,6 @@ const config: Config = {
           postsPerPage: 5,
           remarkPlugins: [remarkMath, convertAnchor],
           rehypePlugins: [rehypeKatex],
-          showReadingTime: false,
           feedOptions: {
             type: null,
           },
