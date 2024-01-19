@@ -1,16 +1,13 @@
 import React from 'react';
 import clsx from 'clsx';
-import DocItem from '@theme-original/DocItem';
+import Footer from '@theme-original/DocItem/Footer';
 import Giscus from '@giscus/react';
-import type {Props} from '@theme/DocItem';
 
-import styles from '@docusaurus/theme-classic/src/theme/DocItem/Layout/styles.module.css';
-
-export default function DocItemWrapper(props: Props): JSX.Element {
+export default function FooterWrapper(): JSX.Element {
   return (
     <>
-      <DocItem {...props} />
-      <div className={clsx('margin-top--lg', styles.docItemCol)}>
+      <Footer />
+      <div className='margin-top--lg'>
         <Giscus
           repo="jmkim0/blog"
           repoId="R_kgDOK-1fHg"
