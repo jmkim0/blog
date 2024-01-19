@@ -71,6 +71,9 @@ const config: Config = {
   ],
   themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     docs: {
       sidebar: {
         hideable: true,
