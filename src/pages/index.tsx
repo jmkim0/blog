@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Giscus from '@giscus/react';
 
 import styles from './index.module.css';
 
@@ -58,6 +59,29 @@ function HomepageFeatures(): JSX.Element {
   );
 }
 
+function HomepageComments(): JSX.Element {
+  return (
+    <section>
+      <div className="container">
+        <Giscus
+          repo="jmkim0/blog"
+          repoId="R_kgDOK-1fHg"
+          category="giscus"
+          categoryId="DIC_kwDOK-1fHs4CcgWw"
+          mapping="pathname"
+          strict="0"
+          reactionsEnabled="1"
+          emit-metadata="0"
+          inputPosition="bottom"
+          theme="preferred_color_scheme"
+          lang="ko"
+          loading="lazy"
+        />
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -65,6 +89,7 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <HomepageComments />
       </main>
     </Layout>
   );

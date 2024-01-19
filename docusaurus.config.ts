@@ -3,6 +3,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+
 import convertAnchor from './src/remark/convert-anchor';
 
 const {themes} = require('prism-react-renderer');
