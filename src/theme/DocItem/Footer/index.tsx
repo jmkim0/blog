@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import Footer from '@theme-original/DocItem/Footer';
 import Giscus from '@giscus/react';
 
