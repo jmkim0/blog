@@ -1,10 +1,13 @@
 import Giscus from '@giscus/react';
+import {useColorMode} from '@docusaurus/theme-common';
 
 type Props = {
   className: string;
 }
 
 export default function Comments({className}: Props): JSX.Element {
+  const {colorMode, setColorMode} = useColorMode();
+
   return (
     <div className={className}>
       <Giscus
@@ -17,7 +20,7 @@ export default function Comments({className}: Props): JSX.Element {
         reactionsEnabled="1"
         emit-metadata="0"
         inputPosition="bottom"
-        theme="preferred_color_scheme"
+        theme={colorMode}
         lang="ko"
         loading="lazy"
       />
