@@ -2,10 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import DocItem from '@theme-original/DocItem';
 import Giscus from '@giscus/react';
+import type {Props} from '@theme/DocItem';
 
 import styles from '@docusaurus/theme-classic/src/theme/DocItem/Layout/styles.module.css';
 
-export default function DocItemWrapper(props) {
+export default function DocItemWrapper(props: Props): JSX.Element {
   return (
     <>
       <DocItem {...props} />
