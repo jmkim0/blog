@@ -10,8 +10,8 @@ export default function BlogPostItemWrapper(props: Props): JSX.Element {
   return (
     <>
       <BlogPostItem {...props} />
-      <div className='margin-top--lg'>
-        {isBlogPostPage && (
+      {isBlogPostPage && (
+        <div className="margin-top--lg">
           <Giscus
             repo="jmkim0/blog"
             repoId="R_kgDOK-1fHg"
@@ -26,8 +26,8 @@ export default function BlogPostItemWrapper(props: Props): JSX.Element {
             lang="ko"
             loading="lazy"
           />
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 }
