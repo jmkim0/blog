@@ -6,7 +6,7 @@ type Props = {
 }
 
 export default function Comments({className}: Props): JSX.Element {
-  const {colorMode, setColorMode} = useColorMode();
+  const {colorMode} = useColorMode();
 
   return (
     <div className={className}>
