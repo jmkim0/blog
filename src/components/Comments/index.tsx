@@ -22,7 +22,6 @@ export default function Comments({className}: Props): JSX.Element {
         inputPosition="bottom"
         theme={colorMode}
         lang="ko"
-        loading="lazy"
       />
     </div>
   );
