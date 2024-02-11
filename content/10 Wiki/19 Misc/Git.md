@@ -8,8 +8,8 @@ draft: "true"
 ## To Do
 
 - [ ] `git submodule`
-    - [ ] recurse
-    - [ ] --remote
+  - [ ] recurse
+  - [ ] --remote
 - [ ] `git rm --cache`
 - [ ] `<refspec>`
 - [ ] `git pull` recursive

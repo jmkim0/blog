@@ -59,7 +59,7 @@ tags:
 
 - [MAC](https://en.wikipedia.org/wiki/Medium_access_control)
 - [ARP](https://en.wikipedia.org/wiki/Address_Resolution_Protocol)
-    - OSI 2.5 layer, network와 data link 사이
+  - OSI 2.5 layer, network와 data link 사이
 - [QUIC - Wikipedia](https://en.wikipedia.org/wiki/QUIC)
 
 ### 패킷

@@ -8,7 +8,9 @@ tags:
 ---
 # Security
 
-## [HTTPS](https://en.wikipedia.org/wiki/HTTPS)
+## [HTTPS]
+
+[HTTPS]: https://en.wikipedia.org/wiki/HTTPS
 
 - [How HTTPS works](https://howhttps.works/)
 - [GitHub - alex/what-happens-when: An attempt to answer the age old interview question "What happens when you type google.com into your browser and press enter?"](https://github.com/alex/what-happens-when#tls-handshake)
@@ -18,11 +20,11 @@ tags:
 - [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - 공개키로 암호화, 개인키로 복호화 → 보낸 사람과 개인키를 가진 사람만 확인 가능 → 비대칭 암호화 전송
 - 개인키로 암호화, 공개키로 복호화 → 개인키를 가진 사람만 암호 생성 가능 → 서명 역할
-    - 인증서를 hashing하고 개인키로 암호화하여 서명을 작성 → 인증서를 hashing한 값과 공개키로 서명을 복호화한 값이 같으면 인증서를 발행한, 서명한 사람이 개인키를 가지고 있음이 증명된다.
+  - 인증서를 hashing하고 개인키로 암호화하여 서명을 작성 → 인증서를 hashing한 값과 공개키로 서명을 복호화한 값이 같으면 인증서를 발행한, 서명한 사람이 개인키를 가지고 있음이 증명된다.
 
-> **Further Reading**
->
-> - [Man-in-the-middle attack - Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
+### *Further Reading*
+
+- [Man-in-the-middle attack - Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
 
 ### 인증서 발급
 
@@ -34,7 +36,9 @@ tags:
 - [Adding Salt to Hashing: A Better Way to Store Passwords](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/)
 - [SHA-2 - Wikipedia](https://en.wikipedia.org/wiki/SHA-2)
 
-## [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie)
+## [HTTP cookie]
+
+[HTTP cookie]: https://en.wikipedia.org/wiki/HTTP_cookie
 
 - [Using HTTP cookies - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 - [Set-Cookie - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
@@ -48,8 +52,8 @@ tags:
 ### Session Based Authentication
 
 - 로그인시 서버에서 인증된 상태, 세션을 저장하고 클라이언트에 있는 쿠키에 저장된 세션을 가리키는 session_id를 담는 방식으로 상태를 유지시킨다.
-    - 유저 로그인 상태, 장바구니 등 정보를 세션에 저장할 수 있다.
-    - In-memory, 세션 스토어(redis 등 트랜잭션이 빠른 DB 사용) 등 저장소에 세션을 저장한다.
+  - 유저 로그인 상태, 장바구니 등 정보를 세션에 저장할 수 있다.
+  - In-memory, 세션 스토어(redis 등 트랜잭션이 빠른 DB 사용) 등 저장소에 세션을 저장한다.
 - 로그아웃시 서버에서는 세션을 저장소에서 제거하고 클라이언트에서는 쿠키의 session_id를 무효한 값으로 바꿔줘야 한다.
 
 ## 웹 보안 공격
@@ -59,10 +63,10 @@ tags:
 - [Session fixation](https://owasp.org/www-community/attacks/Session_fixation)
 - [Clickjacking - Wikipedia](https://en.wikipedia.org/wiki/Clickjacking)
 
-> **Further Reading**
->
-> - [OWASP Foundation, the Open Source Foundation for Application Security | OWASP Foundation](https://owasp.org/)
-> - [Rainbow table - Wikipedia](https://en.wikipedia.org/wiki/Rainbow_table)
+### *Further Reading*
+
+- [OWASP Foundation, the Open Source Foundation for Application Security | OWASP Foundation](https://owasp.org/)
+- [Rainbow table - Wikipedia](https://en.wikipedia.org/wiki/Rainbow_table)
 
 ## Session-based Authentication vs Token-based Authentication
 
@@ -96,10 +100,10 @@ tags:
   → Redis와 같은 key-value 인메모리 DB에 토큰을 저장하고 해당 key-value 쌍의 만료 시간을 최소로 주어 사용할 수 없게 하는 방법 등으로 해결
 - CSR 방식의 애플리케이션에 적합
 
-> **Further Reading**
->
-> - [What is Session Stickiness | Pros and Cons of Using Session Cookies | Imperva](https://www.imperva.com/learn/availability/sticky-session-persistence-and-cookies/)
-> - [Clustering/Session Replication How-To](https://tomcat.apache.org/tomcat-10.1-doc/cluster-howto.html)
+### *Further Reading*
+
+- [What is Session Stickiness | Pros and Cons of Using Session Cookies | Imperva](https://www.imperva.com/learn/availability/sticky-session-persistence-and-cookies/)
+- [Clustering/Session Replication How-To](https://tomcat.apache.org/tomcat-10.1-doc/cluster-howto.html)
 
 ## JWT
 
@@ -119,13 +123,13 @@ tags:
 - JWT 구조상 payload가 Base64로 인코딩되어 쉽게 디코딩 가능  
   → payload에 민감한 정보를 포함하지 않아야 함
 
-> **Further Reading**
->
-> - [JSON Web Signature - Wikipedia](https://en.wikipedia.org/wiki/JSON_Web_Signature)
-> - [RFC 7515 - JSON Web Signature (JWS)](https://datatracker.ietf.org/doc/html/rfc7515)
-> - [JSON Web Encryption - Wikipedia](https://en.wikipedia.org/wiki/JSON_Web_Encryption)
-> - [RFC 7516 - JSON Web Encryption (JWE)](https://datatracker.ietf.org/doc/html/rfc7516)
-> - [RFC 7517: JSON Web Key (JWK)](https://www.rfc-editor.org/rfc/rfc7517.html)
+### *Further Reading*
+
+- [JSON Web Signature - Wikipedia](https://en.wikipedia.org/wiki/JSON_Web_Signature)
+- [RFC 7515 - JSON Web Signature (JWS)](https://datatracker.ietf.org/doc/html/rfc7515)
+- [JSON Web Encryption - Wikipedia](https://en.wikipedia.org/wiki/JSON_Web_Encryption)
+- [RFC 7516 - JSON Web Encryption (JWE)](https://datatracker.ietf.org/doc/html/rfc7516)
+- [RFC 7517: JSON Web Key (JWK)](https://www.rfc-editor.org/rfc/rfc7517.html)
 
 ## OAuth 2.0
 
