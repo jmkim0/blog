@@ -116,28 +116,33 @@ Lima는 Mac 유저들에게 containerd와 nerdctl을 사용할 수 있도록 하
 brew install lima
 
 # Docker가 미리 셋팅된 VM 생성
-# --name=docker: VM 이름을 docker로 설정
+# --name=default: VM 이름을 default로 설정
 # --memory=8: RAM을 8GB로 설정
 # --vm-type=vz: Virtualization framework 사용
 # --rosetta: macOS Rosetta 지원 적용 (x86 emulation)
 # template://docker: docker 템플릿 사용 (rootless)
-limactl create --name=docker --memory=8 --vm-type=vz --rosetta template://docker
-
-# docker VM 실행
-limactl start docker
+limactl create --name=default --memory=8 --vm-type=vz --rosetta template://docker
 
 # Homebrew로 Docker CLI client 설치
 brew install docker
 
 # docker VM의 docker.sock을 host로 하는 lima-docker context 생성
-docker context create lima-docker --docker "host=unix:///Users/example/.lima/docker/sock/docker.sock"
+docker context create lima --docker "host=unix://$HOME/.lima/default/sock/docker.sock"
 
 # lima-docker context 사용
-docker context use lima-docker
+docker context use lima
+
+# VM 실행
+limactl start
+
+# VM 종료
+limactl stop
 
 ```
 
-위와 같은 커맨드로 세팅을 완료하고 나니 Docker CLI를 문제없이 사용할 수 있었다.
+Docker 템플릿을 VM으로 만들고 이름을 `default`로 설정해서 기본 VM으로 지정해주었다.  
+Docker CLI client를 설치하고 VM을 서버로 사용하도록 context를 설정하였다.  
+설정을 마치면 VM을 실행시켰을 때 Docker CLI를 문제없이 사용할 수 있었다.
 
 ### Lima로 Docker를 세팅한 장점
 
