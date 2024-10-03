@@ -17,7 +17,7 @@ Windows를 사용할 때는 [**WSL**](https://learn.microsoft.com/en-us/windows/
 
 ## Docker Desktop
 
-![docker](../00%20Meta/02%20Images/docker.png)
+![docker](docker.png)
 
 Docker를 Mac에서 사용하는 공식적인 방법은 Docker Desktop을 설치하는 것이다. 내 맨 처음 세팅도 Docker Desktop이었다.
 
@@ -31,7 +31,7 @@ Docker 공식 툴이고 GUI와 Kubernetes 등 다양한 기능을 가지고 있�
 
 ## Podman
 
-![podman](../00%20Meta/02%20Images/podman.png)
+![podman](podman.png)
 
 앞서 말한 이유 때문에 Docker Desktop을 사용하지 않고 Docker Engine CLI를 사용하는 방법이 없을까 하다가 발견한 것이 [**Podman**](https://podman.io/)이다. Podman은 Docker와 호환되는 별개의 툴로 Red Hat에서 개발을 시작한 오픈 소스 컨테이너 관리 툴이다.
 
@@ -99,7 +99,7 @@ Mac에도 공식적으로 지원하는 [**Virtualization framework**](https://de
 
 ## Lima
 
-![lima](../00%20Meta/02%20Images/lima.png)
+![lima](lima.png)
 
 Visual Studio Code의 Docker 확장 프로그램이 몇 번 업데이트 되고 난 이후에도 Podman과 호환되지 않아서 해당 확장 프로그램 repository의 issue들을 살펴보던 중 [**nerdctl**](https://github.com/containerd/nerdctl)이라는 툴도 있다는 것을 알게 되었다. 해당 툴도 현재 호환이 되지 않는 상태였다.
 
@@ -137,7 +137,6 @@ limactl start
 
 # VM 종료
 limactl stop
-
 ```
 
 Docker 템플릿을 VM으로 만들고 이름을 `default`로 설정해서 기본 VM으로 지정해주었다.  

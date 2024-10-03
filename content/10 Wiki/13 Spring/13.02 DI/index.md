@@ -7,7 +7,7 @@ tags:
 
 ## Spring IoC Container
 
-![Spring IoC Container](../../00%20Meta/02%20Images/container-magic.png)
+![Spring IoC Container](container-magic.png)
 
 ```java
 // create and configure beans
@@ -43,7 +43,7 @@ List<String> userList = service.getUsernameList();
 
 ### *See Also*
 
-- [Singleton Pattern](../19%20Misc/Design%20Patterns.md#singleton-pattern)
+- [Singleton Pattern](<../../19 Misc/Design Patterns.md#singleton-pattern>)
 
 ## Annotation 기반 설정 사용 시 주의점
 

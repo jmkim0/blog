@@ -113,7 +113,7 @@ RTO, DupAck 기반 재전송 기술로 신뢰성이 확보되어 있다.
 
 ### URL & URI
 
-![URL](../../00%20Meta/02%20Images/mdn-url-all.png)
+![URL](<./HTML & CSS/mdn-url-all.png>
 
 - [URL](https://en.wikipedia.org/wiki/URL)
 - [Uniform Resource Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)

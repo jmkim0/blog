@@ -7,7 +7,7 @@ tags:
 
 ## [`DispatcherServlet`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html)
 
-![MVC Context Hierarchy](<../../00 Meta/02 Images/mvc-context-hierarchy.png>)
+![MVC Context Hierarchy](mvc-context-hierarchy.png)g
 
 Spring MVC는 `DispatcherServlet`이 애플리케이션의 중심에서 요청 처리를 위해 공유되는 알고리즘을 제공하고 실제 동작은 따로 설정 가능한 대리 컴퍼넌트가 하게 되는 [front controller](https://en.wikipedia.org/wiki/Front_controller) 패턴으로 설계되었다.
 

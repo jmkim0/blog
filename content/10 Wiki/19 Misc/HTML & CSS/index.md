@@ -397,7 +397,7 @@ div {
 - 위와 같이 적음으로써 부모 요소는 flex container가 되고 flexbox 관련 속성을 적용할 수 있다.
 - 자식 요소들은 flex item이라고 부른다.
 
-![CSS Flexbox](../../00%20Meta/02%20Images/css-flex.png)
+![CSS Flexbox](./css-flex.png)
 
 #### Flex container 속성들
 

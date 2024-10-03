@@ -39,7 +39,7 @@ class Solution {
 }
 ```
 
-![풀이 1](../../../00%20Meta/02%20Images/trucks1.png)
+![풀이 1](trucks1.png)
 
 - 시간 복잡도: $O(\verb|bridge_length|\times\verb|truck_weights.length|)$  
 최악의 경우 트럭이 무거워서 다리를 1대씩 건너가면 다리 길이와 트럭 대수를 곱한 만큼 루프를 돈다.
@@ -84,7 +84,7 @@ class Solution {
 }
 ```
 
-![풀이 2](../../../00%20Meta/02%20Images/trucks2.png)
+![풀이 2](trucks2.png)
 
 - 시간 복잡도: $O(\verb|truck_weights.length|)$  
 2개의 인덱스가 1씩 증가한다고 해도 트럭 개수의 2배만큼만 루프를 돌면 된다.
@@ -135,7 +135,7 @@ class Solution {
 }
 ```
 
-![풀이 3](../../../00%20Meta/02%20Images/trucks3.png)
+![풀이 3](trucks3.png)
 
 - 시간 복잡도: $O(\verb|truck_weights.length|)$
 - 공간 복잡도: $O(\verb|bridge_length|)$
