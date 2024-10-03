@@ -146,8 +146,10 @@ const config: Config = {
       const path = /(?:10 Wiki|20 Posts)(.*).md/.exec(params.filePath)[1];
 
       result.frontMatter.slug = path
-        .replaceAll(/\/(?:\d{2}(?:\.\d+)?|\d{4}-\d{2}-\d{2}) /g, '/')
-        .replaceAll(' ', '+');
+        .replaceAll(/\/\d{2}(?:\.\d+)? /g, '/')
+        .replace(/(\d{4})-(\d{2})-(\d{2}) /, '$1/$2/$3/')
+        .replaceAll(' ', '+')
+        .replace(/\/index$/, '');
 
       return result;
     },
