@@ -123,4 +123,4 @@ Gemma 2 2B 모델을 활용하여 PDF, HTML 문서를 요약하는 Python 스크
 
 점점 기술이 발전하면서 LLM 자체의 크기도 커지고 그 성능도 대단해지고 있지만 Gemma 2 2B처럼 효율이 좋고 작은 LLM도 오픈 모델로 나오고 있다. API에 비용을 지불하고 활용할 수도 있지만 로컬에서 활용할 수 있는 작고 효율적인 오픈 모델의 활용도 익혀두면 작업의 특성에 따라 다르게 활용한다는 선택지도 가져갈 수 있어 좋을 것 같다. 물론 선택지 간의 결정에는 API 사용료와 엔지니어링 비용의 trade-off도 고려해야겠지만 말이다.
 
-[^1]: https://python.langchain.com/docs/tutorials/summarization/
+[^1]: [Summarize Text | LangChain](https://python.langchain.com/docs/tutorials/summarization/)
