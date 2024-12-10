@@ -15,6 +15,9 @@ const config: Config = {
   trailingSlash: false,
   onBrokenAnchors: 'throw',
   onBrokenMarkdownLinks: 'throw',
+  future: {
+    experimental_faster: true,
+  },
   presets: [
     [
       'classic',

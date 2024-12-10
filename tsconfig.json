@@ -1,7 +1,6 @@
 {
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
-    "lib": ["ES2021.String"]
+    "baseUrl": "."
   }
 }
