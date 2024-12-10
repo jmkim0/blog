@@ -46,7 +46,6 @@ tags:
 - HTML5 표준과 함께 생긴 [시맨틱 요소]의 일부로 요소 이름 자체에 의미를 담고 있다.
 - [`<nav>`], [`<article>`], [`<aside>`], [`<main>`] 등 특수한 의미를 담고 있는 요소를 사용하지 않을 때 사용해야 한다.
 
-[`<section>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
 [시맨틱 요소]: https://developer.mozilla.org/en-US/docs/Glossary/Semantics
 [`<nav>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
 [`<article>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
@@ -55,18 +54,19 @@ tags:
 
 #### [`<div>`]
 
+- [`<div>`: The Content Division element | MDN]
 - HTML5 이전에 구역(division)을 나타내기 위해 범용적으로 사용하던 요소이다.
 - 모던 웹에서는 내용에 상관 없이 스타일을 적용하기 위해서만 사용하는 편이 좋다.
 
+[`<section>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
 [`<div>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div
 
-### [`<pre>`]
+### `<pre>`
 
+- [`<pre>`: The Preformatted Text element | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 - HTML에 작성한 내용 그대로, 미리 서식을 지정한 텍스트를 나타내는 요소.
 - 보통 고정폭(monospace) 글꼴로 렌더링되고 요소 내 공백을 그대로 유지한다.
 - ASCII 아트 등을 표현할 때 쓰일 수 있다.
-
-[`<pre>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
 
 ### Formatting Elements
 
@@ -108,20 +108,14 @@ tags:
 
 [`<del>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
 
-### [`<bdo>`]
+### `<bdo>`
 
-- The Bidirectional Text Override element.
-- 적힌 텍스트의 방향을 다시 정해준다.
+- [`<bdo>`: The Bidirectional Text Override element | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo)
 - `dir` 속성이 방향을 정한다.
 - `ltr`: 왼쪽에서 오른쪽
 - `rtl`: 오른쪽에서 왼쪽
 
-[`<bdo>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo
-
-### [`<a>`]의 [`target`] 속성
-
-[`<a>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
-[`target`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target
+### `<a>`의 `target` 속성
 
 #### `_self`
 
@@ -138,6 +132,10 @@ tags:
 #### `_top`
 
 링크가 가장 위에 있는 browsing context에 열린다. 따로 해당 context가 없는 경우 `_self`와 같다.
+
+#### *References*
+
+- [`<a>`: The Anchor element | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target)
 
 ### `id`와 `class`
 
@@ -463,7 +461,8 @@ Order 값에 따라 오름차순으로 flex item들이 정렬된다.
 
 #### [목업]
 
-목업은 실물 모형을 의미하는데 웹 또는 앱은 HTML과 CSS를 사용하여 동적인 부분을 제외하고 실제 제품의 모습, UI만 똑같게 만든 것이 목업이 된다.
+- 실물 모형을 의미한다.
+- 웹 앱의 경우 HTML과 CSS 등을 사용하여 동적인 부분을 제외하고 실제 제품의 모습, UI만 똑같게 만든 것을 목업이라고 한다.
 
 [목업]: https://en.wikipedia.org/wiki/Mockup#Software_engineering
 
