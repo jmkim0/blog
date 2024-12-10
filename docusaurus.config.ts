@@ -152,7 +152,7 @@ const config: Config = {
         .replaceAll(/\/\d{2}(?:\.\d+)? /g, '/')
         .replace(/(\d{4})-(\d{2})-(\d{2}) /, '$1/$2/$3/')
         .replaceAll(' ', '+')
-        .replace(/\/index$/, '');
+        .replace(/\/(?:index|readme)$/i, '');
 
       return result;
     },
