@@ -457,7 +457,7 @@ Order 값에 따라 오름차순으로 flex item들이 정렬된다.
 - 웹 또는 앱을 개발할 때 레이아웃의 뼈대를 그린 것을 와이어프레임이라고 한다.
 - 와이어로 설계된 모양이라는 의미로 단순한 선, 도형으로 웹 또는 앱의 인터페이스를 묘사한다.
 - 단순하게 레이아웃을 보여주는 용도라서 전환 효과, 애니메이션, 유저 테스트와 같은 스타일링, UX와는 거리가 멀다.
-- [Figma](https://www.figma.com/), [Miro](https://miro.com/), [Oven](https://ovenapp.io/), PowerPoint 등의 툴을 사용한다.
+- [Figma](https://www.figma.com/), [Miro](https://miro.com/), PowerPoint 등의 툴을 사용한다.
 
 [와이어프레임]: https://en.wikipedia.org/wiki/Website_wireframe
 
